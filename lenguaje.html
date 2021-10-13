@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+{% block title %} lenguaje {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+
+        <h1>leguajes de programacion</h1>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>nombre</th>
+                    </tr>
+                <thead>
+                <tbody>
+                    {% for leng in lenguaje%}
+                        <tr>
+                            <td>{{loop.index}}</td>
+                            <td>{{leng}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
